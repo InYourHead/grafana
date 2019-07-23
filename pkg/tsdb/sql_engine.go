@@ -198,6 +198,9 @@ var Interpolate = func(query *Query, timeRange *TimeRange, sql string) (string, 
 	sql = strings.Replace(sql, "$__interval", interval.Text, -1)
 	sql = strings.Replace(sql, "$__unixEpochFrom()", fmt.Sprintf("%d", timeRange.GetFromAsSecondsEpoch()), -1)
 	sql = strings.Replace(sql, "$__unixEpochTo()", fmt.Sprintf("%d", timeRange.GetToAsSecondsEpoch()), -1)
+	sql = strings.Replace(sql, "$__currentUser()", `'`+query.SignedInUser.Login+`'`, -1)
+
+	fmt.Println(sql)
 
 	return sql, nil
 }

@@ -664,6 +664,11 @@ export const grafanaMacros = [
     display: '$__escapeMulti()',
     hint: 'Macro to escape multi-value template variables that contain illegal characters.',
   },
+  {
+    text: '$__currentUser',
+    display: '$__currentUser()',
+    hint: 'Macro to return current logged in username login.',
+  },
   { text: '$__contains', display: '$__contains()', hint: 'Macro for multi-value template variables.' },
 ];
 
