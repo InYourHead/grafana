@@ -162,6 +162,7 @@ Macros:
 - $__timeGroupAlias(column,'5m') -&gt; cast(cast(UNIX_TIMESTAMP(column)/(300) as signed)*300 as signed) AS "time"
 - $__unixEpochGroup(column,'5m') -&gt; column DIV 300 * 300
 - $__unixEpochGroupAlias(column,'5m') -&gt; column DIV 300 * 300 AS "time"
+- $__currentUser() -> TEXT -> logged user admin -> 'admin'
 
 Example of group by and order by with $__timeGroup:
 SELECT

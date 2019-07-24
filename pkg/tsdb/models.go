@@ -16,6 +16,7 @@ type Query struct {
 	RefId         string
 	Model         *simplejson.Json
 	DataSource    *models.DataSource
+	SignedInUser  *models.SignedInUser
 	MaxDataPoints int64
 	IntervalMs    int64
 }
