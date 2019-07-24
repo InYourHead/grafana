@@ -137,15 +137,15 @@ function timeFormat(ticks: number, min: number, max: number): string {
       return '%H:%M';
     }
     if (secPerTick <= 80000) {
-      return '%m/%d %H:%M';
+      return '%d-%m-%Y %H:%M';
     }
     if (secPerTick <= 2419200 || range <= oneYear) {
-      return '%m/%d';
+      return '%d-%m-%Y';
     }
-    return '%Y-%m';
+    return '%m-%Y';
   }
 
-  return '%H:%M';
+  return '%d-%m-%Y %H:%M';
 }
 
 export default Graph;
